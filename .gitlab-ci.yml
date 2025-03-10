@@ -1,0 +1,30 @@
+# The Docker image that will be used to build your app
+image: node:18
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -r dist/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

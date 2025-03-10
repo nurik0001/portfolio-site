@@ -1,0 +1,91 @@
+{
+  "home": {
+    "greeting": "Привет, я",
+    "name": "Нурдаулет Юсупов",
+    "role": "Frontend Разработчик",
+    "description": "Я создаю современные и отзывчивые веб-приложения, используя передовые технологии и лучшие практики разработки. Более 6 лет опыта в разработке и предпринимательстве.",
+    "typed": {
+      "roles": [
+        "Frontend Разработчик",
+        "React Специалист",
+        "Angular Разработчик",
+        "UI/UX Энтузиаст"
+      ]
+    }
+  },
+  "nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "portfolio": "Портфолио",
+    "contact": "Контакты"
+  },
+  "buttons": {
+    "view_projects": "Посмотреть проекты",
+    "contact_me": "Связаться со мной",
+    "download_cv": "Скачать резюме"
+  },
+  "about": {
+    "title": "Обо мне",
+    "bio": "Frontend разработчик с опытом предпринимательства и технического обслуживания. Обладаю глубокими знаниями в веб-разработке и понимаю бизнес-процессы изнутри.",
+    "experience": {
+      "title": "Опыт работы",
+      "items": [
+        {
+          "company": "KARNURMAX",
+          "position": "Frontend-разработчик",
+          "period": "Декабрь 2024 - настоящее время",
+          "description": "Разработка проекта для ресторана с использованием Angular, Node.js, Angular Material, Gitlab, Docker"
+        },
+        {
+          "company": "Mobile service",
+          "position": "Предприниматель",
+          "period": "Октябрь 2022 - Июль 2024",
+          "description": "Управление магазином по продаже сотовых аксессуаров и запчастей"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Навыки",
+      "technical": [
+        "JavaScript", "TypeScript", "React", "Angular",
+        "HTML5", "CSS3", "SASS/LESS",
+        "Git", "Docker", "REST API",
+        "PostgreSQL", "Node.js"
+      ],
+      "soft": [
+        "Управление проектами",
+        "Работа в команде",
+        "Решение проблем",
+        "Бизнес-анализ"
+      ]
+    },
+    "education": {
+      "title": "Образование и курсы",
+      "items": [
+        {
+          "name": "TechOrda",
+          "specialization": "Front-end developer",
+          "year": "2024"
+        },
+        {
+          "name": "Udemy",
+          "specialization": "Front-end Javascript",
+          "year": "2024"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Контакты",
+    "email": "nurdauletusupov@gmail.com",
+    "phone": "+7 (776) 305-2116",
+    "location": "Астана, Казахстан",
+    "linkedin": "https://linkedin.com/in/nurdaulet-usupov-82875018a",
+    "form": {
+      "name": "Ваше имя",
+      "email": "Email",
+      "message": "Сообщение",
+      "send": "Отправить"
+    }
+  }
+} 
