@@ -3,17 +3,33 @@ FROM node:18-alpine as build
 
 WORKDIR /app
 
-# Copy package files from portfolio-site
-COPY portfolio-site/package*.json ./
+# Копируем файлы package.json и package-lock.json
+COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Устанавливаем зависимости
+RUN npm ci
 
-# Copy project files from portfolio-site
-COPY portfolio-site/ ./
+# Копируем исходный код
+COPY . .
 
-# Build the project
+# Собираем приложение
 RUN npm run build
+
+# Этап для запуска приложения
+FROM node:18-alpine as production
+
+WORKDIR /app
+
+# Копируем собранные файлы и зависимости
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./
+
+# Открываем порт
+EXPOSE 3000
+
+# Запускаем приложение
+CMD ["npm", "start"]
 
 # Production stage
 FROM nginx:alpine

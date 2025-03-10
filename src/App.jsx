@@ -72,7 +72,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/">
         <div className="flex flex-col min-h-screen bg-white dark:bg-secondary-900 overflow-x-hidden">
           {!isMobile && <CustomCursor />}
           <AnimatedBackground />

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Сервис для React приложения
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    # Для разработки можно использовать volumes
+    # volumes:
+    #   - ./src:/app/src
+    #   - ./public:/app/public
+
+  # Nginx для проксирования и статических файлов
+  nginx:
+    image: nginx:alpine
+    container_name: portfolio-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+    restart: unless-stopped 
